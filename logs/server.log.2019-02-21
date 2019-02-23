@@ -1,0 +1,804 @@
+[2019-02-21 10:41:05.545] [INFO] [main] [com.xmlserver.main.Main:32] - server start
+[2019-02-21 10:41:15.240] [INFO] [Thread-3] [com.xmlserver.main.Main:91] - BPClient invocation Started
+[2019-02-21 10:41:15.557] [INFO] [Thread-3] [com.xmlserver.main.BPClient:214] - Message Id/UPID for this transaction urn:uuid:1EF8B8783E5D7EEC9C1550716875561@OEMClient.partner.com
+[2019-02-21 10:41:15.576] [INFO] [Thread-3] [com.xmlserver.main.BPClient:369] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T02:41:15Z</eb:Timestamp><eb:MessageId>urn:uuid:1EF8B8783E5D7EEC9C1550716875561@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 10:41:15.577] [INFO] [Thread-3] [com.xmlserver.main.BPClient:370] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 10:41:15.582] [INFO] [Thread-3] [com.xmlserver.main.BPClient:177] - /G:/ws/xmlserver/target/classes/wsgx_test_cisco.jks
+[2019-02-21 10:41:15.587] [INFO] [Thread-3] [com.xmlserver.main.BPClient:185] - Invoking the service ::::
+[2019-02-21 10:41:15.592] [INFO] [Thread-3] [com.xmlserver.main.BPClient:186] - Here is the request<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T02:41:15Z</eb:Timestamp><eb:MessageId>urn:uuid:1EF8B8783E5D7EEC9C1550716875561@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging></soapenv:Header><soapenv:Body><oem:CONSIGNMENT xmlns:oem="urn:BrandProtection:oem:1.0" xmlns:common="urn:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:BrandProtection:oem:1.0 OEM_XSD_Valid.xsd">
+         <CONSIGNMENT_HDR>
+            <LABEL_SUPPLIER>Worldmark</LABEL_SUPPLIER>
+            <DATE_RECEIVED_ROLL_ID>1907-08-13</DATE_RECEIVED_ROLL_ID>
+            <LABEL_QTY_RECEIVED>3000</LABEL_QTY_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVED>MWA9E7676792</LABEL_ROLL_ID_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVER>4352190</LABEL_ROLL_ID_RECEIVER>
+            <PRINTER_OPERATOR_NAME>3782981</PRINTER_OPERATOR_NAME>
+            <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+            <LPN>ABCD</LPN>
+            <MFGR_DATE></MFGR_DATE>
+         </CONSIGNMENT_HDR>
+         <CONSIGNMENT_LINES>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E60001122</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-10-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>NA</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME>CISCO</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E600011</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME>Avago</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-11-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>Jabil Electronics</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+         </CONSIGNMENT_LINES>
+</oem:CONSIGNMENT></soapenv:Body></soapenv:Envelope>
+[2019-02-21 10:41:20.447] [INFO] [Thread-3] [com.xmlserver.main.BPClient:192] - Acknowledgement from Service::<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><eb:Messaging xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="true"><eb:SignalMessage><eb:MessageInfo><eb:Timestamp>2019-02-21T02:41:15Z</eb:Timestamp><eb:MessageId>urn:uuid:6D8117BF3BB015C4D51550716875013@OEMService.cisco.com</eb:MessageId><eb:RefToMessageId>urn:uuid:1EF8B8783E5D7EEC9C1550716875561@OEMClient.partner.com</eb:RefToMessageId></eb:MessageInfo><eb:Receipt><ebbpsig:NonRepudiationInformation xmlns:ebbpsig="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><ebbpsig:MessagePartNRInformation><ebbpsig:MessagePartIdentifier>SWAContID123</ebbpsig:MessagePartIdentifier></ebbpsig:MessagePartNRInformation></ebbpsig:NonRepudiationInformation></eb:Receipt></eb:SignalMessage></eb:Messaging><mesha:MeshaDoneBlock xmlns:mesha="http://cisco.com"><mesha:MeshaDone>true</mesha:MeshaDone></mesha:MeshaDoneBlock></soapenv:Header><soapenv:Body></soapenv:Body></soapenv:Envelope>
+[2019-02-21 10:41:20.448] [INFO] [Thread-3] [com.xmlserver.main.BPClient:195] - Service Invoked Sucessfully
+[2019-02-21 10:41:20.450] [INFO] [Thread-3] [com.xmlserver.main.Main:116] - <?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><eb:Messaging xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="true"><eb:SignalMessage><eb:MessageInfo><eb:Timestamp>2019-02-21T02:41:15Z</eb:Timestamp><eb:MessageId>urn:uuid:6D8117BF3BB015C4D51550716875013@OEMService.cisco.com</eb:MessageId><eb:RefToMessageId>urn:uuid:1EF8B8783E5D7EEC9C1550716875561@OEMClient.partner.com</eb:RefToMessageId></eb:MessageInfo><eb:Receipt><ebbpsig:NonRepudiationInformation xmlns:ebbpsig="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><ebbpsig:MessagePartNRInformation><ebbpsig:MessagePartIdentifier>SWAContID123</ebbpsig:MessagePartIdentifier></ebbpsig:MessagePartNRInformation></ebbpsig:NonRepudiationInformation></eb:Receipt></eb:SignalMessage></eb:Messaging><mesha:MeshaDoneBlock xmlns:mesha="http://cisco.com"><mesha:MeshaDone>true</mesha:MeshaDone></mesha:MeshaDoneBlock></soapenv:Header><soapenv:Body></soapenv:Body></soapenv:Envelope>
+[2019-02-21 10:47:42.161] [INFO] [main] [com.xmlserver.main.Main:32] - server start
+[2019-02-21 10:47:46.296] [INFO] [Thread-3] [com.xmlserver.main.Main:91] - BPClient invocation Started
+[2019-02-21 10:47:46.320] [ERROR] [Thread-3] [com.xmlserver.main.Main:119] - java.lang.NullPointerException
+[2019-02-21 10:49:07.074] [INFO] [main] [com.xmlserver.main.Main:32] - server start
+[2019-02-21 10:49:08.940] [INFO] [Thread-3] [com.xmlserver.main.Main:91] - BPClient invocation Started
+[2019-02-21 10:49:09.157] [INFO] [Thread-3] [com.xmlserver.main.BPClient:214] - Message Id/UPID for this transaction urn:uuid:19224EB2498CF73B4F1550717349161@OEMClient.partner.com
+[2019-02-21 10:49:09.175] [INFO] [Thread-3] [com.xmlserver.main.BPClient:369] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T02:49:09Z</eb:Timestamp><eb:MessageId>urn:uuid:19224EB2498CF73B4F1550717349161@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 10:49:09.176] [INFO] [Thread-3] [com.xmlserver.main.BPClient:370] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 10:49:09.181] [INFO] [Thread-3] [com.xmlserver.main.BPClient:177] - /G:/ws/xmlserver/target/classes/wsgx_test_cisco.jks
+[2019-02-21 10:49:09.186] [INFO] [Thread-3] [com.xmlserver.main.BPClient:185] - Invoking the service ::::
+[2019-02-21 10:49:09.191] [INFO] [Thread-3] [com.xmlserver.main.BPClient:186] - Here is the request<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T02:49:09Z</eb:Timestamp><eb:MessageId>urn:uuid:19224EB2498CF73B4F1550717349161@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging></soapenv:Header><soapenv:Body><oem:CONSIGNMENT xmlns:oem="urn:BrandProtection:oem:1.0" xmlns:common="urn:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:BrandProtection:oem:1.0 OEM_XSD_Valid.xsd">
+         <CONSIGNMENT_HDR>
+            <LABEL_SUPPLIER>Worldmark</LABEL_SUPPLIER>
+            <DATE_RECEIVED_ROLL_ID>1907-08-13</DATE_RECEIVED_ROLL_ID>
+            <LABEL_QTY_RECEIVED>3000</LABEL_QTY_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVED>MWA9E7676792</LABEL_ROLL_ID_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVER>4352190</LABEL_ROLL_ID_RECEIVER>
+            <PRINTER_OPERATOR_NAME>3782981</PRINTER_OPERATOR_NAME>
+            <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+            <LPN>ABCD</LPN>
+            <MFGR_DATE></MFGR_DATE>
+         </CONSIGNMENT_HDR>
+         <CONSIGNMENT_LINES>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E60001122</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-10-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>NA</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME>CISCO</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E600011</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME>Avago</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-11-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>Jabil Electronics</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+         </CONSIGNMENT_LINES>
+</oem:CONSIGNMENT></soapenv:Body></soapenv:Envelope>
+[2019-02-21 10:49:14.163] [INFO] [Thread-3] [com.xmlserver.main.BPClient:192] - Acknowledgement from Service::<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><eb:Messaging xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="true"><eb:SignalMessage><eb:MessageInfo><eb:Timestamp>2019-02-21T02:49:09Z</eb:Timestamp><eb:MessageId>urn:uuid:6D8117BF3BB015C4D51550717348087@OEMService.cisco.com</eb:MessageId><eb:RefToMessageId>urn:uuid:19224EB2498CF73B4F1550717349161@OEMClient.partner.com</eb:RefToMessageId></eb:MessageInfo><eb:Receipt><ebbpsig:NonRepudiationInformation xmlns:ebbpsig="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><ebbpsig:MessagePartNRInformation><ebbpsig:MessagePartIdentifier>SWAContID123</ebbpsig:MessagePartIdentifier></ebbpsig:MessagePartNRInformation></ebbpsig:NonRepudiationInformation></eb:Receipt></eb:SignalMessage></eb:Messaging><mesha:MeshaDoneBlock xmlns:mesha="http://cisco.com"><mesha:MeshaDone>true</mesha:MeshaDone></mesha:MeshaDoneBlock></soapenv:Header><soapenv:Body></soapenv:Body></soapenv:Envelope>
+[2019-02-21 10:49:14.164] [INFO] [Thread-3] [com.xmlserver.main.BPClient:195] - Service Invoked Sucessfully
+[2019-02-21 11:03:36.793] [INFO] [main] [com.xmlserver.main.Main:32] - server start
+[2019-02-21 11:03:46.161] [INFO] [main] [com.xmlserver.main.Main:32] - server start
+[2019-02-21 11:03:49.031] [INFO] [Thread-3] [com.xmlserver.main.Main:91] - BPClient invocation Started
+[2019-02-21 11:03:49.354] [INFO] [Thread-3] [com.xmlserver.main.BPClient:215] - Message Id/UPID for this transaction urn:uuid:5B3DE3224871328E111550718229358@OEMClient.partner.com
+[2019-02-21 11:03:49.373] [INFO] [Thread-3] [com.xmlserver.main.BPClient:370] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T03:03:49Z</eb:Timestamp><eb:MessageId>urn:uuid:5B3DE3224871328E111550718229358@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 11:03:49.374] [INFO] [Thread-3] [com.xmlserver.main.BPClient:371] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 11:03:49.379] [INFO] [Thread-3] [com.xmlserver.main.BPClient:178] - /G:/ws/xmlserver/target/classes/wsgx_test_cisco.jks
+[2019-02-21 11:03:49.384] [INFO] [Thread-3] [com.xmlserver.main.BPClient:186] - Invoking the service ::::
+[2019-02-21 11:03:49.390] [INFO] [Thread-3] [com.xmlserver.main.BPClient:187] - Here is the request<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T03:03:49Z</eb:Timestamp><eb:MessageId>urn:uuid:5B3DE3224871328E111550718229358@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging></soapenv:Header><soapenv:Body><oem:CONSIGNMENT xmlns:oem="urn:BrandProtection:oem:1.0" xmlns:common="urn:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:BrandProtection:oem:1.0 OEM_XSD_Valid.xsd">
+         <CONSIGNMENT_HDR>
+            <LABEL_SUPPLIER>Worldmark</LABEL_SUPPLIER>
+            <DATE_RECEIVED_ROLL_ID>1907-08-13</DATE_RECEIVED_ROLL_ID>
+            <LABEL_QTY_RECEIVED>3000</LABEL_QTY_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVED>MWA9E7676792</LABEL_ROLL_ID_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVER>4352190</LABEL_ROLL_ID_RECEIVER>
+            <PRINTER_OPERATOR_NAME>3782981</PRINTER_OPERATOR_NAME>
+            <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+            <LPN>ABCD</LPN>
+            <MFGR_DATE></MFGR_DATE>
+         </CONSIGNMENT_HDR>
+         <CONSIGNMENT_LINES>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E60001122</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-10-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>NA</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME>CISCO</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E600011</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME>Avago</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-11-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>Jabil Electronics</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+         </CONSIGNMENT_LINES>
+</oem:CONSIGNMENT></soapenv:Body></soapenv:Envelope>
+[2019-02-21 11:03:53.875] [INFO] [Thread-3] [com.xmlserver.main.BPClient:193] - Acknowledgement from Service::<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><eb:Messaging xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="true"><eb:SignalMessage><eb:MessageInfo><eb:Timestamp>2019-02-21T03:03:49Z</eb:Timestamp><eb:MessageId>urn:uuid:16B1DCDF1AE1E06D4F1550718228655@OEMService.cisco.com</eb:MessageId><eb:RefToMessageId>urn:uuid:5B3DE3224871328E111550718229358@OEMClient.partner.com</eb:RefToMessageId></eb:MessageInfo><eb:Receipt><ebbpsig:NonRepudiationInformation xmlns:ebbpsig="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><ebbpsig:MessagePartNRInformation><ebbpsig:MessagePartIdentifier>SWAContID123</ebbpsig:MessagePartIdentifier></ebbpsig:MessagePartNRInformation></ebbpsig:NonRepudiationInformation></eb:Receipt></eb:SignalMessage></eb:Messaging><mesha:MeshaDoneBlock xmlns:mesha="http://cisco.com"><mesha:MeshaDone>true</mesha:MeshaDone></mesha:MeshaDoneBlock></soapenv:Header><soapenv:Body></soapenv:Body></soapenv:Envelope>
+[2019-02-21 11:03:53.876] [INFO] [Thread-3] [com.xmlserver.main.BPClient:196] - Service Invoked Sucessfully
+[2019-02-21 11:57:10.934] [INFO] [main] [com.xmlserver.main.Main:28] - server start
+[2019-02-21 11:57:16.310] [INFO] [Thread-3] [com.xmlserver.main.Main:87] - BPClient invocation Started
+[2019-02-21 11:57:16.560] [INFO] [Thread-3] [com.xmlserver.main.BPClient:206] - Message Id/UPID for this transaction urn:uuid:7630EA257997970CE11550721436564@OEMClient.partner.com
+[2019-02-21 11:57:16.581] [INFO] [Thread-3] [com.xmlserver.main.BPClient:361] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T03:57:16Z</eb:Timestamp><eb:MessageId>urn:uuid:7630EA257997970CE11550721436564@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 11:57:16.581] [INFO] [Thread-3] [com.xmlserver.main.BPClient:362] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 11:57:16.584] [INFO] [Thread-3] [com.xmlserver.main.BPClient:194] - Execption: null
+[2019-02-21 11:59:46.405] [INFO] [main] [com.xmlserver.main.Main:28] - server start
+[2019-02-21 11:59:48.589] [INFO] [Thread-3] [com.xmlserver.main.Main:87] - BPClient invocation Started
+[2019-02-21 11:59:48.802] [INFO] [Thread-3] [com.xmlserver.main.BPClient:204] - Message Id/UPID for this transaction urn:uuid:82444C3C5DA7362EA21550721588806@OEMClient.partner.com
+[2019-02-21 11:59:48.818] [INFO] [Thread-3] [com.xmlserver.main.BPClient:359] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T03:59:48Z</eb:Timestamp><eb:MessageId>urn:uuid:82444C3C5DA7362EA21550721588806@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 11:59:48.818] [INFO] [Thread-3] [com.xmlserver.main.BPClient:360] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 11:59:48.823] [INFO] [Thread-3] [com.xmlserver.main.BPClient:167] - /G:/ws/xmlserver/target/classes/wsgx_test_cisco.jks
+[2019-02-21 11:59:48.828] [INFO] [Thread-3] [com.xmlserver.main.BPClient:175] - Invoking the service ::::
+[2019-02-21 11:59:48.833] [INFO] [Thread-3] [com.xmlserver.main.BPClient:176] - Here is the request<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T03:59:48Z</eb:Timestamp><eb:MessageId>urn:uuid:82444C3C5DA7362EA21550721588806@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging></soapenv:Header><soapenv:Body><oem:CONSIGNMENT xmlns:oem="urn:BrandProtection:oem:1.0" xmlns:common="urn:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:BrandProtection:oem:1.0 OEM_XSD_Valid.xsd">
+         <CONSIGNMENT_HDR>
+            <LABEL_SUPPLIER>Worldmark</LABEL_SUPPLIER>
+            <DATE_RECEIVED_ROLL_ID>1907-08-13</DATE_RECEIVED_ROLL_ID>
+            <LABEL_QTY_RECEIVED>3000</LABEL_QTY_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVED>MWA9E7676792</LABEL_ROLL_ID_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVER>4352190</LABEL_ROLL_ID_RECEIVER>
+            <PRINTER_OPERATOR_NAME>3782981</PRINTER_OPERATOR_NAME>
+            <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+            <LPN>ABCD</LPN>
+            <MFGR_DATE></MFGR_DATE>
+         </CONSIGNMENT_HDR>
+         <CONSIGNMENT_LINES>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E60001122</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-10-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>NA</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME>CISCO</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E600011</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME>Avago</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-11-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>Jabil Electronics</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+         </CONSIGNMENT_LINES>
+</oem:CONSIGNMENT></soapenv:Body></soapenv:Envelope>
+[2019-02-21 11:59:52.965] [INFO] [Thread-3] [com.xmlserver.main.BPClient:182] - Acknowledgement from Service::<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><eb:Messaging xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="true"><eb:SignalMessage><eb:MessageInfo><eb:Timestamp>2019-02-21T03:59:48Z</eb:Timestamp><eb:MessageId>urn:uuid:6D8117BF3BB015C4D51550721588042@OEMService.cisco.com</eb:MessageId><eb:RefToMessageId>urn:uuid:82444C3C5DA7362EA21550721588806@OEMClient.partner.com</eb:RefToMessageId></eb:MessageInfo><eb:Receipt><ebbpsig:NonRepudiationInformation xmlns:ebbpsig="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><ebbpsig:MessagePartNRInformation><ebbpsig:MessagePartIdentifier>SWAContID123</ebbpsig:MessagePartIdentifier></ebbpsig:MessagePartNRInformation></ebbpsig:NonRepudiationInformation></eb:Receipt></eb:SignalMessage></eb:Messaging><mesha:MeshaDoneBlock xmlns:mesha="http://cisco.com"><mesha:MeshaDone>true</mesha:MeshaDone></mesha:MeshaDoneBlock></soapenv:Header><soapenv:Body></soapenv:Body></soapenv:Envelope>
+[2019-02-21 11:59:52.966] [INFO] [Thread-3] [com.xmlserver.main.BPClient:185] - Service Invoked Sucessfully
+[2019-02-21 14:15:17.694] [INFO] [main] [com.xmlserver.main.Main:24] - server start
+[2019-02-21 14:16:09.579] [INFO] [main] [com.xmlserver.main.Main:25] - server start
+[2019-02-21 14:16:12.921] [INFO] [Thread-3] [com.xmlserver.main.Main:52] - BPClient invocation Started
+[2019-02-21 14:16:13.166] [INFO] [Thread-3] [com.xmlserver.main.BPClient:208] - Message Id/UPID for this transaction urn:uuid:025BB5F11E31A8DFA41550729773170@OEMClient.partner.com
+[2019-02-21 14:16:13.184] [INFO] [Thread-3] [com.xmlserver.main.BPClient:363] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T06:16:13Z</eb:Timestamp><eb:MessageId>urn:uuid:025BB5F11E31A8DFA41550729773170@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 14:16:13.184] [INFO] [Thread-3] [com.xmlserver.main.BPClient:364] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 14:16:13.189] [INFO] [Thread-3] [com.xmlserver.main.BPClient:171] - /G:/ws/xmlserver/target/classes/wsgx_test_cisco.jks
+[2019-02-21 14:16:13.190] [INFO] [Thread-3] [com.xmlserver.main.BPClient:196] - Execption: null
+[2019-02-21 14:17:44.341] [INFO] [main] [com.xmlserver.main.Main:25] - server start
+[2019-02-21 14:17:47.132] [INFO] [Thread-3] [com.xmlserver.main.Main:52] - BPClient invocation Started
+[2019-02-21 14:17:47.149] [ERROR] [Thread-3] [com.xmlserver.main.Main:81] - java.lang.NullPointerException
+[2019-02-21 14:18:33.618] [INFO] [main] [com.xmlserver.main.Main:25] - server start
+[2019-02-21 14:18:35.188] [INFO] [Thread-3] [com.xmlserver.main.Main:52] - BPClient invocation Started
+[2019-02-21 14:18:35.397] [INFO] [Thread-3] [com.xmlserver.main.BPClient:208] - Message Id/UPID for this transaction urn:uuid:796E22A162911E4D291550729915401@OEMClient.partner.com
+[2019-02-21 14:18:35.415] [INFO] [Thread-3] [com.xmlserver.main.BPClient:363] - messageing:<mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T06:18:35Z</eb:Timestamp><eb:MessageId>urn:uuid:796E22A162911E4D291550729915401@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging>
+[2019-02-21 14:18:35.415] [INFO] [Thread-3] [com.xmlserver.main.BPClient:364] - header:<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"></soapenv:Header>
+[2019-02-21 14:18:35.420] [INFO] [Thread-3] [com.xmlserver.main.BPClient:171] - /G:/ws/xmlserver/target/classes/wsgx_test_cisco.jks
+[2019-02-21 14:18:35.425] [INFO] [Thread-3] [com.xmlserver.main.BPClient:179] - Invoking the service ::::
+[2019-02-21 14:18:35.430] [INFO] [Thread-3] [com.xmlserver.main.BPClient:180] - Here is the request<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><mesha:Messaging xmlns:mesha="http://ciscoB2BService.com/xsd" mesha:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="0"><eb:UserMessage xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><eb:MessageInfo><eb:Timestamp>2019-02-21T06:18:35Z</eb:Timestamp><eb:MessageId>urn:uuid:796E22A162911E4D291550729915401@OEMClient.partner.com</eb:MessageId></eb:MessageInfo><eb:PartyInfo><eb:From><eb:PartyId>OEMClient.partner.com</eb:PartyId><eb:Role>http://example.org/roles/Buyer</eb:Role></eb:From><eb:To><eb:PartyId>OEMService.cisco.com</eb:PartyId><eb:Role>http://example.org/roles/Seller</eb:Role></eb:To></eb:PartyInfo><eb:CollaborationInfo><eb:ConversationId></eb:ConversationId></eb:CollaborationInfo><eb:MessageProperties></eb:MessageProperties><eb:PayloadInfo><eb:PartInfo href="SWAContID123"><eb:Schema location="http://www.cisco.com/assets/wsx_xsd/QWS/root.xsd"></eb:Schema><eb:PartProperties><eb:Property name="CharacterSet">utf-8</eb:Property><eb:Property name="Description">Purchase Order for 11 Widgets</eb:Property><eb:Property name="MimeType">application/xml</eb:Property></eb:PartProperties></eb:PartInfo></eb:PayloadInfo></eb:UserMessage></mesha:Messaging></soapenv:Header><soapenv:Body><oem:CONSIGNMENT xmlns:oem="urn:BrandProtection:oem:1.0" xmlns:common="urn:common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:BrandProtection:oem:1.0 OEM_XSD_Valid.xsd">
+         <CONSIGNMENT_HDR>
+            <LABEL_SUPPLIER>Worldmark</LABEL_SUPPLIER>
+            <DATE_RECEIVED_ROLL_ID>1907-08-13</DATE_RECEIVED_ROLL_ID>
+            <LABEL_QTY_RECEIVED>3000</LABEL_QTY_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVED>MWA9E7676792</LABEL_ROLL_ID_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVER>4352190</LABEL_ROLL_ID_RECEIVER>
+            <PRINTER_OPERATOR_NAME>3782981</PRINTER_OPERATOR_NAME>
+            <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+            <LPN>ABCD</LPN>
+            <MFGR_DATE></MFGR_DATE>
+         </CONSIGNMENT_HDR>
+         <CONSIGNMENT_LINES>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E60001122</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-10-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>NA</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME>CISCO</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E600011</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME>Avago</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-11-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>Jabil Electronics</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2></common:ADDRESS2>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME></common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2></common:ADDRESS2>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+         </CONSIGNMENT_LINES>
+</oem:CONSIGNMENT></soapenv:Body></soapenv:Envelope>
+[2019-02-21 14:18:38.736] [INFO] [Thread-3] [com.xmlserver.main.BPClient:186] - Acknowledgement from Service::<?xml version="1.0" encoding="utf-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header><eb:Messaging xmlns:eb="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/" xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/core/ebms-header-3_0-200704.xsd" soapenv:mustUnderstand="true"><eb:SignalMessage><eb:MessageInfo><eb:Timestamp>2019-02-21T06:18:34Z</eb:Timestamp><eb:MessageId>urn:uuid:6D8117BF3BB015C4D51550729913932@OEMService.cisco.com</eb:MessageId><eb:RefToMessageId>urn:uuid:796E22A162911E4D291550729915401@OEMClient.partner.com</eb:RefToMessageId></eb:MessageInfo><eb:Receipt><ebbpsig:NonRepudiationInformation xmlns:ebbpsig="http://docs.oasis-open.org/ebxml-msg/ebms/v3.0/ns/core/200704/"><ebbpsig:MessagePartNRInformation><ebbpsig:MessagePartIdentifier>SWAContID123</ebbpsig:MessagePartIdentifier></ebbpsig:MessagePartNRInformation></ebbpsig:NonRepudiationInformation></eb:Receipt></eb:SignalMessage></eb:Messaging><mesha:MeshaDoneBlock xmlns:mesha="http://cisco.com"><mesha:MeshaDone>true</mesha:MeshaDone></mesha:MeshaDoneBlock></soapenv:Header><soapenv:Body></soapenv:Body></soapenv:Envelope>
+[2019-02-21 14:18:38.737] [INFO] [Thread-3] [com.xmlserver.main.BPClient:189] - Service Invoked Sucessfully
+[2019-02-21 14:22:51.339] [INFO] [main] [com.xmlserver.main.Main:25] - server start
+[2019-02-21 16:55:41.880] [INFO] [main] [com.xmlserver.main.Main:25] - server start

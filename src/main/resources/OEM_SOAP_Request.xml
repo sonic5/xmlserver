@@ -1,0 +1,147 @@
+<oem:CONSIGNMENT xsi:schemaLocation="urn:BrandProtection:oem:1.0 OEM_XSD_Valid.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oem="urn:BrandProtection:oem:1.0" xmlns:common="urn:common">
+         <CONSIGNMENT_HDR>
+            <LABEL_SUPPLIER>Worldmark</LABEL_SUPPLIER>
+            <DATE_RECEIVED_ROLL_ID>1907-08-13</DATE_RECEIVED_ROLL_ID>
+            <LABEL_QTY_RECEIVED>3000</LABEL_QTY_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVED>MWA9E7676792</LABEL_ROLL_ID_RECEIVED>
+            <LABEL_ROLL_ID_RECEIVER>4352190</LABEL_ROLL_ID_RECEIVER>
+            <PRINTER_OPERATOR_NAME>3782981</PRINTER_OPERATOR_NAME>
+            <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+            <LPN>ABCD</LPN>
+            <MFGR_DATE/>
+         </CONSIGNMENT_HDR>
+         <CONSIGNMENT_LINES>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E60001122</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME/>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2/>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2/>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-10-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>NA</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2/>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME>CISCO</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2/>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+            <CONSIGNMENT_LINE>
+               <CISCO_PID_SN>AGM12382001</CISCO_PID_SN>
+               <CISCO_PID_PN>10-12345-01</CISCO_PID_PN>
+               <CISCO_PID>GLC-SX-MM</CISCO_PID>
+               <LABEL_ROLL_ID_RECEIVED>WA9E6</LABEL_ROLL_ID_RECEIVED>
+               <LABEL_PN>473-00011-01</LABEL_PN>
+               <LABEL_SN>WA9E600011</LABEL_SN>
+               <LABEL_SN_STATUS>Shipping</LABEL_SN_STATUS>
+               <OPERATOR_SCANNED_LABEL_SN>192034900</OPERATOR_SCANNED_LABEL_SN>
+               <LABEL_SN_REASON>A</LABEL_SN_REASON>
+               <TRANSACTION_FLAG>NEW</TRANSACTION_FLAG>
+               <MFGR_DATE>1997-08-12</MFGR_DATE>
+               <OEM_INFO>
+                  <common:ID>BP003</common:ID>
+                  <common:NAME>Avago</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>350 W. Trimble Rd. Bldg. 90</common:ADDRESS1>
+                     <common:ADDRESS2/>
+                     <common:COUNTRY>USA</common:COUNTRY>
+                     <common:STATE>CA</common:STATE>
+                     <common:CITY>San Jose</common:CITY>
+                     <common:ZIP_CODE>95131</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_INFO>
+               <OEM_CM_INFO>
+                  <common:ID>BP003a</common:ID>
+                  <common:NAME>Xgiga Communication Tech</common:NAME>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1-3 Floor, #7, 2nd Southern Industrial Zone of Honghualing</common:ADDRESS1>
+                     <common:ADDRESS2/>
+                     <common:COUNTRY>China</common:COUNTRY>
+                     <common:STATE>Shenzhen</common:STATE>
+                     <common:CITY>Nanshan</common:CITY>
+                     <common:ZIP_CODE>518000</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </OEM_CM_INFO>
+               <SHIPTO_CUSTOMER_INFO>
+                  <SHIPTO_CARRIER>DHL</SHIPTO_CARRIER>
+                  <SHIPTO_TRACKING_NO>45612345XYZ</SHIPTO_TRACKING_NO>
+                  <SHIPTO_TRACKING_DATE>2015-11-22</SHIPTO_TRACKING_DATE>
+                  <CUSTOMER_INFO>
+                     <common:ID>CM20013</common:ID>
+                     <common:NAME>Jabil Electronics</common:NAME>
+                     <common:CONTACT_ADDRESS>
+                        <common:ADDRESS1>10560 Dr Martin Luther King Jr St. N</common:ADDRESS1>
+                        <common:ADDRESS2/>
+                        <common:COUNTRY>United States</common:COUNTRY>
+                        <common:STATE>Florida</common:STATE>
+                        <common:CITY>St. Petersburg</common:CITY>
+                        <common:ZIP_CODE>33716</common:ZIP_CODE>
+                     </common:CONTACT_ADDRESS>
+                  </CUSTOMER_INFO>
+               </SHIPTO_CUSTOMER_INFO>
+               <BILLTO_CUSTOMER_INFO>
+                  <common:ID>Cis1234</common:ID>
+                  <common:NAME/>
+                  <common:CONTACT_ADDRESS>
+                     <common:ADDRESS1>1001 Z Technologies pvt.Lmt</common:ADDRESS1>
+                     <common:ADDRESS2/>
+                     <common:COUNTRY>INDIA</common:COUNTRY>
+                     <common:STATE>MAHARASHTRA</common:STATE>
+                     <common:CITY>PUNE</common:CITY>
+                     <common:ZIP_CODE>411014</common:ZIP_CODE>
+                  </common:CONTACT_ADDRESS>
+               </BILLTO_CUSTOMER_INFO>
+            </CONSIGNMENT_LINE>
+         </CONSIGNMENT_LINES>
+</oem:CONSIGNMENT>
